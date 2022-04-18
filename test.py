@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
-driver = webdriver.Chrome('C://Users//Administrator//PycharmProjects//chromedriver.exe')
+driver = webdriver.Chrome('chromedriver.exe')
 driver.implicitly_wait(1)
 # driver = webdriver.Chrome(options=options)
 url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-26'
