@@ -6,15 +6,7 @@ options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 
-# 쿠키 생성하기
-driver.add_cookie({'domain':'.foo.bar','name':'foo', 'value':'bar'})
 
-# 쿠키 삭제하기
-# name 값으로 찾음
-delete_cookie(name)
-
-# 모든 쿠키 삭제하기
-delete_all_cookies()
 
 
 # driver = webdriver.Chrome('chromedriver.exe')
@@ -29,7 +21,18 @@ chrome_options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
 
-# driver.implicitly_wait(1)
+# 쿠키 생성하기
+driver.add_cookie({'domain':'.foo.bar','name':'foo', 'value':'bar'})
+
+# 쿠키 삭제하기
+# name 값으로 찾음
+delete_cookie(name)
+
+# 모든 쿠키 삭제하기
+delete_all_cookies()
+
+
+# driver.implicitly_wait(2)
 # driver = webdriver.Chrome(options=options)
 
 # 뒤에 날짜만 넣으면 됨
