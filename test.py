@@ -6,6 +6,17 @@ options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 
+# 쿠키 생성하기
+driver.add_cookie({'domain':'.foo.bar','name':'foo', 'value':'bar'})
+
+# 쿠키 삭제하기
+# name 값으로 찾음
+delete_cookie(name)
+
+# 모든 쿠키 삭제하기
+delete_all_cookies()
+
+
 # driver = webdriver.Chrome('chromedriver.exe')
 
 # ------- 신규
@@ -21,7 +32,8 @@ driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 # driver.implicitly_wait(1)
 # driver = webdriver.Chrome(options=options)
 
-url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-26'
+# 뒤에 날짜만 넣으면 됨
+url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-23'
 driver.get(url)
 
 from bs4 import BeautifulSoup
@@ -58,7 +70,7 @@ while True:
 
     # 10초마다 새로고침하여 반복
 
-    time.sleep(10)
+    time.sleep(300)
     driver.refresh()
 
 
