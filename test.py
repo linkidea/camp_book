@@ -25,7 +25,7 @@ options.add_argument('User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4
 # driver = webdriver.Chrome(options=options)
 
 # 뒤에 날짜만 넣으면 됨
-url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-26'
+url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-23'
 driver.get(url)
 
 from bs4 import BeautifulSoup
@@ -60,9 +60,9 @@ while True:
         driver.quit() # 드라이버 완전히 종료. 창 하나만 닫으려면 .close()
         break
 
-    # 10초마다 새로고침하여 반복
+    # 180초마다 새로고침하여 반복
 
-    time.sleep(300)
+    time.sleep(180)
     driver.refresh()
 
 
