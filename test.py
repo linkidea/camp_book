@@ -6,9 +6,6 @@ options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 
-
-
-
 # driver = webdriver.Chrome('chromedriver.exe')
 
 # ------- 신규
@@ -20,16 +17,8 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
-
-# 쿠키 생성하기
-driver.add_cookie({'domain':'.foo.bar','name':'foo', 'value':'bar'})
-
-# 쿠키 삭제하기
-# name 값으로 찾음
-delete_cookie(name)
-
-# 모든 쿠키 삭제하기
-delete_all_cookies()
+# 헤더에 headless chrome 임을 나타내는 내용을 진짜 컴퓨터처럼 바꿔줌.
+options.add_argument('User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36') 
 
 
 # driver.implicitly_wait(2)
