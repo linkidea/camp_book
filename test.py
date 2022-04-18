@@ -21,7 +21,7 @@ driver.implicitly_wait(2)
 
 # 원하는 날짜 넣기
 # sedate=("2022-04-23","2022-04-30","2022-05-07","2022-05-14","2022-05-21","2022-04-27")
-sedate=("2022-05-21","2022-04-27")
+sedate=("2022-04-27")
 
 while True:
     for i in sedate:
@@ -168,3 +168,4 @@ while True:
 #     # 새로고침 10초
 #     time.sleep(10)
 #     driver.refresh()
+ 
