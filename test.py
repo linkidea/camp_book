@@ -4,7 +4,6 @@ import telegram
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-from selenium.webdriver.chrome.options import Options
 
 # ------- 신규
 options = Options()
@@ -21,7 +20,8 @@ driver.implicitly_wait(2)
 
 
 # 원하는 날짜 넣기
-sedate=("2022-04-23","2022-04-30","2022-05-07","2022-05-14","2022-05-21","2022-04-27")
+# sedate=("2022-04-23","2022-04-30","2022-05-07","2022-05-14","2022-05-21","2022-04-27")
+sedate=("2022-05-21","2022-04-27")
 
 while True:
     for i in sedate:
@@ -49,12 +49,12 @@ while True:
         bot.sendMessage(chat_id=chat_id, text=i + " 자리 났음! 빨리 예약하세요!")
         driver.quit()  # 드라이버 완전히 종료. 창 하나만 닫으려면 .close()
         break
+        time.sleep(5)
+        driver.refresh()
 
-        # 180초마다 새로고침하여 반복
-    time.sleep(10)
+# 15초마다 새로고침하여 반복
+    time.sleep(15)
     driver.refresh()
-
-
 
 
 
