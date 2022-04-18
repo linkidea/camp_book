@@ -25,7 +25,7 @@ options.add_argument('User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4
 # driver = webdriver.Chrome(options=options)
 
 # 뒤에 날짜만 넣으면 됨
-url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-23'
+url = 'https://imjingakcamping.co.kr/resv/res_01.html?checkdate=2022-04-26'
 driver.get(url)
 
 from bs4 import BeautifulSoup
