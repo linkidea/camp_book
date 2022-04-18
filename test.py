@@ -6,13 +6,13 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 
-# ------- 신규
 chrome_driver = os.path.join('chromedriver')
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')               # headless
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 chrome_options.add_argument('User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36')
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 driver.implicitly_wait(2)
