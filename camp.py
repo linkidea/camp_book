@@ -20,7 +20,7 @@ driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 driver.implicitly_wait(5)
 
 # 원하는 날짜 넣기
-sedate = ("2022-04-23", "2022-05-07", "2022-05-14", "2022-04-27")
+sedate = ("2022-04-23", "2022-04-30", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-14")
 
 while True :
     for i in sedate:
@@ -51,16 +51,11 @@ while True :
             driver.quit()  # 드라이버 완전히 종료. 창 하나만 닫으려면 .close()
             break
 
-        time.sleep(random.uniform(3, 10))  # 5~30초 사이 랜덤으로 쉼
+        time.sleep(random.uniform(10, 60))  # 10~60초 사이 랜덤으로 쉼
         driver.refresh()
 
     if data :
         break
-
-
-
-
-
 
 
 # import os
