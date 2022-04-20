@@ -51,13 +51,14 @@ while True :
             driver.quit()  # 드라이버 완전히 종료. 창 하나만 닫으려면 .close()
             break
 
-        time.sleep(random.uniform(10, 60))  # 10~60초 사이 랜덤으로 쉼
+        time.sleep(random.uniform(5, 30))  # 5~30초 사이 랜덤으로 쉼
         driver.refresh()
 
     if data :
         break
 
-
+#-----------------------------------------------------------------------------
+        
 # import os
 # import time
 # import telegram 
