@@ -17,10 +17,10 @@ chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 chrome_options.add_argument('User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36')
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
-driver.implicitly_wait(5)
+driver.implicitly_wait(3)
 
 # 원하는 날짜 넣기
-sedate = ("2022-04-30", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-14", "2022-05-21", "2022-05-28")
+sedate = ("2022-04-30", "2022-05-05", "2022-05-06", "2022-05-07", "2022-05-14", "2022-05-21")
 
 while True :
     for i in sedate:
@@ -51,7 +51,7 @@ while True :
             driver.quit()  # 드라이버 완전히 종료. 창 하나만 닫으려면 .close()
             break
 
-        time.sleep(random.uniform(3, 30))  # 5~30초 사이 랜덤으로 쉼
+        time.sleep(random.uniform(3, 10))  # 3 ~ 10초 사이 랜덤으로 쉼
         driver.refresh()
 
     if data :
