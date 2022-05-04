@@ -20,7 +20,7 @@ driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 driver.implicitly_wait(3)
 
 # 원하는 날짜 넣기
-sedate = ("2022-05-14", "2022-05-28")
+sedate = ("2022-05-05", "2022-05-14", "2022-05-28")
 
 while True :
     for i in sedate:
